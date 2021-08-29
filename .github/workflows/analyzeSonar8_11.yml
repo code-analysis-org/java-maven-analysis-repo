@@ -3,8 +3,6 @@
 name: Build Java Project using Maven
 on:
   push:
-    branches:
-      test
 #  push:
 #    branches: [ $default-branch ]
 #  pull_request:
