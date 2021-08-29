@@ -1,6 +1,8 @@
-name: Build
+name: Build and analyze with java 11
 on:
   push:
+    branches:
+      test
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
