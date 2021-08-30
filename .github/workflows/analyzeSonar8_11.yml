@@ -71,6 +71,7 @@ jobs:
           ACTIONS_RO_PACKAGES_USERNAME: ${{ secrets.ACTIONS_RO_PACKAGES_USERNAME }}
           ACTIONS_RO_PACKAGES_TOKEN: ${{ secrets.ACTIONS_RO_PACKAGES_TOKEN }}
       # We need to build with Java 8 and then sonar analyze with java 11. So download java 11 for sonar analysis
+  Analyze and Review:
       - name: Download Java 11 for sonar analysis
         uses: actions/checkout@v2
         with:
