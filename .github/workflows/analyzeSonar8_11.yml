@@ -10,7 +10,7 @@ on:
 #  pull_request:
 #    branches: [ $default-branch ]
 jobs:
-  Build_And_Test:
+  Build_Test_And_Analyze:
     name: "Build, Test and Analyze ${{ github.repository }} (Branch: ${{ github.ref }})"
     runs-on: ubuntu-latest
     # This reduces the permissions of the automatic GitHub Auth Token
@@ -71,7 +71,6 @@ jobs:
           ACTIONS_RO_PACKAGES_USERNAME: ${{ secrets.ACTIONS_RO_PACKAGES_USERNAME }}
           ACTIONS_RO_PACKAGES_TOKEN: ${{ secrets.ACTIONS_RO_PACKAGES_TOKEN }}
       # We need to build with Java 8 and then sonar analyze with java 11. So download java 11 for sonar analysis
-  Analyze and Review:
       - name: Download Java 11 for sonar analysis
         uses: actions/checkout@v2
         with:
