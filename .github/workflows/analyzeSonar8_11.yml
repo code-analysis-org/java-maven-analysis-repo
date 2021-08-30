@@ -10,7 +10,7 @@ on:
 #  pull_request:
 #    branches: [ $default-branch ]
 jobs:
-  Build_And_Test:
+  Build_Test_And_Analyze:
     name: "Build, Test and Analyze ${{ github.repository }} (Branch: ${{ github.ref }})"
     runs-on: ubuntu-latest
     # This reduces the permissions of the automatic GitHub Auth Token
